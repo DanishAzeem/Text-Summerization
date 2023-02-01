@@ -1,0 +1,46 @@
+.App {
+    margin: 50px;
+}
+
+.BoxStyle {
+    padding: 20px;
+    border: 1px solid black;
+    width: 50%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.URLStyle {
+    padding: 8px;
+    border: 1px solid black;
+    margin-top: 7px;
+    width: 35%;
+    margin-right: 3px;
+}
+
+.StyleText {
+    margin-top: -12px;
+    margin-left: 20px;
+    position: absolute;
+    background-color: white;
+}
+
+.row {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+    display: flex;
+}
+
+.OutputBoxStyle {
+    padding: 20px;
+    border: 1px solid black;
+    width: 47%;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/styles/App.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/App.css') }}"> -->
+</head>
+
+<body>
+    <!-- <form action="/text_summary" method="post"> -->
+
+
+    <div class="App">
+        <form action="/analyze" method="POST">
+            <!-- Input Text and Box  -->
+            <fieldset class="BoxStyle">
+                <legend>Input</legend>
+                <textarea name="rawtext" id="text" class="column" rows='5' cols="80">{{rawtext}}</textarea>
+                <input type='text' name="linkInput" style="margin-top: 5px;" />
+                <label> (or load from URL)</label>
+            </fieldset>
+
+            <!-- Output Text and Box -->
+            <fieldset class="BoxStyle">
+                <legend>Output</legend>
+                <div class="row">
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Output_ratio" value='Summary' />
+                        Summary
+                    </label>
+                    <label class="row">
+                        <input type='radio' name="Output_ratio" value='Keywords' checked="checked" />
+                        Keywords
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Summarization Ratio Text and Box -->
+            <fieldset class="BoxStyle">
+                <legend>Summarization Ratio</legend>
+                <div class="row">
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='0.05' checked='checked' />
+                        5%
+                    </label>
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='0.1' />
+                        10%
+                    </label>
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='0.2' />
+                        20%
+                    </label>
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='0.3' />
+                        30%
+                    </label>
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='0.4' />
+                        40%
+                    </label>
+                </div>
+
+                <div class="row" style="margin-top: 5px;">
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='0.5' />
+                        50%
+                    </label>
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='0.6' />
+                        60%
+                    </label>
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='0.7' />
+                        70%
+                    </label>
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='0.8' />
+                        80%
+                    </label>
+                    <label class="row" style="margin-right: 10px;">
+                        <input type='radio' name="Sum_ratio" value='1' />
+                        100%
+                    </label>
+                </div>
+            </fieldset>
+            <!-- Language and Box -->
+            <fieldset class="BoxStyle">
+                <legend>Language</legend>
+                <select>
+                    <option>en</option>
+                    <option>ur</option>
+                </select>
+            </fieldset>
+            <!-- Submit -->
+            <input type="submit" />
+            <!-- <button type="submit" style="margin-bottom: 24px; margin-top: 5px;">Submit</button> -->
+            <!-- output Box -->
+            <div style="margin-left: 2%;width: 51%;font-size: 18px;">
+                <p>{{keywords}}</p>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

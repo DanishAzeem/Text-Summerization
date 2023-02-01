@@ -1,0 +1,9 @@
+{
+    "visualText": [
+        {
+            "name": "Analyzer",
+            "type": "state",
+            "currentAnalyzer": "g:\\VS Code\\text_summarization"
+        }
+    ]
+}
